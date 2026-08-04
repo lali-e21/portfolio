@@ -1,7 +1,6 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
-import logo from '../../assets/logo.jpg';
-
+import logo from '../../assets/logo.JPG';
 const Hero = () => {
   return (
     <section id="home" className="min-h-screen flex items-center relative overflow-hidden pt-[80px]">
