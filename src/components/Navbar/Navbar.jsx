@@ -49,14 +49,19 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-      <div className={`fixed top-[80px] left-1/2 -translate-x-1/2 w-[90%] p-8 flex flex-col items-center opacity-0 invisible transition-all duration-400 ease-out glass-panel ${isMobileMenuOpen ? '!translate-y-0 !opacity-100 !visible' : '-translate-y-[150%]'}`}>
-        <ul className="flex flex-col items-center gap-6 text-xl font-medium">
+      <div className={`fixed top-[80px] left-1/2 -translate-x-1/2 w-[90%] max-[480px]:w-[95%] p-8 max-[480px]:p-6 flex flex-col items-center opacity-0 invisible transition-all duration-400 ease-out glass-panel shadow-2xl shadow-black/50 ${isMobileMenuOpen ? '!translate-y-0 !opacity-100 !visible' : '-translate-y-[150%]'}`}>
+        <ul className="flex flex-col items-center gap-6 text-xl max-[480px]:text-lg font-medium w-full">
           {navLinks.map((link) => (
-            <li key={link.name}>
-              <a href={link.href} onClick={() => setIsMobileMenuOpen(false)}>{link.name}</a>
+            <li key={link.name} className="w-full text-center">
+              <a href={link.href} className="block w-full py-2 hover:text-emerald-500 transition-colors" onClick={() => setIsMobileMenuOpen(false)}>{link.name}</a>
             </li>
           ))}
         </ul>
+        
+        <div className="flex items-center gap-2 mt-8 py-2 px-6 bg-emerald-500/10 border border-emerald-500/20 rounded-full">
+          <span className="w-2 h-2 bg-emerald-500 rounded-full shadow-[0_0_10px_#10B981] animate-[pulse-glow_2s_infinite]"></span>
+          <span className="text-sm text-emerald-500 font-medium">Available for hire</span>
+        </div>
       </div>
     </nav>
   );

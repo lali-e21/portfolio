@@ -7,13 +7,37 @@ const Contact = () => {
     email: '',
     message: ''
   });
+  const [status, setStatus] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Simulate form submission
-    console.log(formData);
-    alert("Message sent successfully! (This is a simulation)");
-    setFormData({ name: '', email: '', message: '' });
+    setStatus("Sending...");
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/walelign2129@gmail.com", {
+        method: "POST",
+        headers: { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+            name: formData.name,
+            email: formData.email,
+            message: formData.message,
+            _subject: `New contact from ${formData.name}`
+        })
+      });
+      if (response.ok) {
+        setStatus("Message sent successfully!");
+        setFormData({ name: '', email: '', message: '' });
+        setTimeout(() => setStatus(""), 4000);
+      } else {
+        setStatus("Failed to send message. Please try again.");
+        setTimeout(() => setStatus(""), 4000);
+      }
+    } catch (error) {
+      setStatus("Error sending message.");
+      setTimeout(() => setStatus(""), 4000);
+    }
   };
 
   const handleChange = (e) => {
@@ -99,8 +123,8 @@ const Contact = () => {
                 required
               ></textarea>
             </div>
-            <button type="submit" className="btn-primary justify-center mt-2 p-4">
-              Send Message <Send size={18} />
+            <button type="submit" className="btn-primary justify-center mt-2 p-4" disabled={status === "Sending..."}>
+              {status === "Sending..." ? "Sending..." : status || <>Send Message <Send size={18} /></>}
             </button>
           </form>
         </div>
