@@ -1,0 +1,72 @@
+import React from 'react';
+
+const Skills = () => {
+  const skillCategories = [
+    {
+      title: "Frontend Development",
+      skills: [
+        { name: "React / Vite", level: 90 },
+        { name: "JavaScript (ES6+)", level: 85 },
+        { name: "HTML5 & CSS3", level: 95 },
+        { name: "Tailwind CSS", level: 85 },
+        { name: "Next.js", level: 75 }
+      ]
+    },
+    {
+      title: "Backend Development",
+      skills: [
+        { name: "Node.js", level: 80 },
+        { name: "Express", level: 80 },
+        { name: "MongoDB", level: 75 },
+        { name: "SQL", level: 70 },
+        { name: "RESTful APIs", level: 85 }
+      ]
+    },
+    {
+      title: "Tools & Others",
+      skills: [
+        { name: "Git & GitHub", level: 85 },
+        { name: "Figma", level: 70 },
+        { name: "Vercel / Netlify", level: 80 },
+        { name: "Postman", level: 80 },
+        { name: "Responsive Design", level: 95 }
+      ]
+    }
+  ];
+
+  return (
+    <section id="skills" className="section relative">
+      <div className="bg-glow-2"></div>
+      
+      <div className="container">
+        <h2 className="section-title">Technical <span className="text-gradient">Skills</span></h2>
+        
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(320px,1fr))] max-[480px]:grid-cols-1 gap-8">
+          {skillCategories.map((category, idx) => (
+            <div key={idx} className="p-10 max-md:p-6 glass-panel">
+              <h3 className="text-2xl mb-8 text-center relative inline-block left-1/2 -translate-x-1/2 after:content-[''] after:absolute after:w-1/2 after:h-[2px] after:bg-gradient-primary after:-bottom-2 after:left-1/4">{category.title}</h3>
+              <div className="flex flex-col gap-6">
+                {category.skills.map((skill, index) => (
+                  <div key={index} className="w-full">
+                    <div className="flex justify-between mb-2">
+                      <span className="font-medium">{skill.name}</span>
+                      <span className="text-sm text-text-secondary">{skill.level}%</span>
+                    </div>
+                    <div className="w-full h-2 bg-white/5 rounded-full overflow-hidden">
+                      <div 
+                        className="progress-fill" 
+                        style={{ width: `${skill.level}%` }}
+                      ></div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Skills;
