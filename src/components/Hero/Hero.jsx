@@ -11,7 +11,7 @@ const Hero = () => {
         <div className="max-w-[600px] max-md:mx-auto animate-fade-in">
           <h3 className="text-lg font-semibold mb-4 tracking-[1px] uppercase text-gradient">Full-Stack Developer & Visual Designer</h3>
           <h1 className="text-[clamp(2.5rem,4vw,3.5rem)] tracking-[-1.5px] mb-6 leading-[1.1] text-white">
-            Crafting scalable web systems & minimalist digital experiences.
+Full Stack Developer and Graphics Designer
           </h1>
 
           <div className="flex gap-4 max-md:flex-col max-md:justify-center delay-200">
