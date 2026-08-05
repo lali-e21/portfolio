@@ -23,13 +23,14 @@ function App() {
       </main>
       <Footer />
 
-      <a
-        href="#home"
-        className="fixed right-6 bottom-6 z-[1100] rounded-full bg-gradient-primary p-4 text-white shadow-[0_15px_40px_rgba(14,165,233,0.35)] transition-transform duration-300 hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-sky-400"
-        aria-label="Go to top"
+      <button
+        type="button"
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        className="fixed left-90 bottom-4 z-[1100] rounded-full bg-gradient-primary p-4 text-white shadow-[0_15px_40px_rgba(14,165,233,0.35)] transition-transform duration-300 hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-sky-400 sm:right-6 sm:bottom-6"
+        aria-label="Scroll to top"
       >
         ↑
-      </a>
+      </button>
     </div>
   );
 }

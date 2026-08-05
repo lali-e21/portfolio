@@ -112,18 +112,18 @@ const Experience = () => {
         </div>
         
         <div className="relative max-w-[800px] mx-auto">
-          <div className="absolute left-[200px] top-0 bottom-0 w-[2px] bg-white/10 -translate-x-1/2 max-md:left-[20px] max-[480px]:left-[10px]"></div>
+          <div className="absolute left-[10px] md:left-[20px] lg:left-[200px] top-0 bottom-0 w-[2px] bg-white/10 -translate-x-1/2"></div>
           
           {experiences.map((exp, index) => (
-            <div key={index} className="relative flex items-center mb-12 last:mb-0 max-md:mt-16">
-              <div className="w-[200px] pr-12 flex justify-end max-md:w-auto max-md:absolute max-md:-top-[40px] max-md:left-[40px] max-md:pr-0 max-md:justify-start max-[480px]:left-[10px] max-[480px]:-top-[35px]">
+            <div key={index} className="relative flex items-center mb-12 last:mb-0 max-lg:mt-16">
+              <div className="w-auto absolute -top-[35px] left-[10px] md:-top-[40px] md:left-[40px] lg:relative lg:top-auto lg:left-auto lg:w-[200px] lg:pr-12 lg:flex lg:justify-end lg:items-center">
                 <span className="bg-cyan-500/10 text-color-primary px-4 py-2 rounded-lg font-bold text-sm">{exp.year}</span>
               </div>
               
-              <div className="absolute left-[200px] w-4 h-4 bg-color-primary rounded-full -translate-x-1/2 shadow-[0_0_10px_var(--color-primary)] z-10 max-md:left-[20px] max-[480px]:left-[10px]"></div>
+              <div className="absolute left-[10px] md:left-[20px] lg:left-[200px] w-4 h-4 bg-color-primary rounded-full -translate-x-1/2 shadow-[0_0_10px_var(--color-primary)] z-10"></div>
               
-              <div className="flex-1 pl-12 max-md:pl-12 max-md:w-full max-[480px]:pl-8">
-                <div className={`p-8 w-full card max-[480px]:py-6 max-[480px]:px-4 text-${exp.align} max-md:text-left`}>
+              <div className="flex-1 pl-8 md:pl-12 w-full lg:w-auto">
+                <div className="p-6 sm:p-8 w-full card text-left">
                   <h3 className="text-xl mb-2 text-orange-300">{exp.title}</h3>
                   <p className="text-[0.95rem] leading-[1.6] text-text-secondary">{exp.description}</p>
                   <div className="flex flex-wrap gap-2 mt-3">

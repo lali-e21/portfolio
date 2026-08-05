@@ -38,9 +38,9 @@ const Skills = () => {
       <div className="container">
         <h2 className="section-title">Technical <span className="text-gradient">Skills</span></h2>
 
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(320px,1fr))] max-[480px]:grid-cols-1 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skillCategories.map((category, idx) => (
-            <div key={idx} className="p-10 max-md:p-6 glass-panel">
+            <div key={idx} className="p-6 md:p-10 glass-panel">
               <h3 className="text-2xl mb-8 text-center relative inline-block left-1/2 -translate-x-1/2 after:content-[''] after:absolute after:w-1/2 after:h-[2px] after:bg-gradient-primary after:-bottom-2 after:left-1/4">{category.title}</h3>
               <div className="flex flex-col gap-6">
                 {category.skills.map((skill, index) => (

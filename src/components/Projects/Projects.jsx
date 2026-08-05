@@ -42,7 +42,7 @@ const ImageSlider = ({ images, title }) => {
   return (
     <div
       ref={scrollRef}
-      className="w-full h-full flex overflow-x-auto snap-x snap-mandatory [&::-webkit-scrollbar]:hidden"
+      className="w-full h-full flex overflow-x-auto snap-x snap-mandatory [&::-webkit-scrollbar]:hidden gap-2"
       style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
     >
       {images.map((img, index) => (
@@ -167,7 +167,7 @@ const Projects = () => {
       <div className="container">
         <h2 className="section-title">Featured <span className="text-gradient">Projects</span></h2>
 
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(350px,1fr))] max-[480px]:grid-cols-1 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <div key={index} className="card overflow-hidden flex flex-col group hover:-translate-y-2 hover:shadow-[0_15px_35px_rgba(0,0,0,0.4)]">
               <div className="relative flex-1 min-h-[100px] overflow-hidden">
