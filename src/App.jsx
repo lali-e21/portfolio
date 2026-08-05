@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="app">
       <Navbar />
-      <main>
+      <main className="pt-[80px]">
         <Hero />
         <About />
         <Experience />
@@ -22,6 +22,14 @@ function App() {
         <Contact />
       </main>
       <Footer />
+
+      <a
+        href="#home"
+        className="fixed right-6 bottom-6 z-[1100] rounded-full bg-gradient-primary p-4 text-white shadow-[0_15px_40px_rgba(14,165,233,0.35)] transition-transform duration-300 hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-sky-400"
+        aria-label="Go to top"
+      >
+        ↑
+      </a>
     </div>
   );
 }

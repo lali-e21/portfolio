@@ -6,30 +6,27 @@ const Skills = () => {
       title: "Frontend Development",
       skills: [
         { name: "React / Vite", level: 90 },
-        { name: "JavaScript (ES6+)", level: 85 },
-        { name: "HTML5 & CSS3", level: 95 },
-        { name: "Tailwind CSS", level: 85 },
-        { name: "Next.js", level: 75 }
+        { name: "React Native", level: 90 },
+        { name: "Next.js", level: 90 }
       ]
     },
     {
       title: "Backend Development",
       skills: [
-        { name: "Node.js", level: 80 },
-        { name: "Express", level: 80 },
-        { name: "MongoDB", level: 75 },
-        { name: "SQL", level: 70 },
-        { name: "RESTful APIs", level: 85 }
+        { name: "Node.js", level: 90 },
+        { name: "MongoDB", level: 90 },
+        { name: "SQL", level: 90 },
+        { name: "RESTful APIs", level: 90 }
       ]
     },
     {
       title: "Tools & Others",
       skills: [
-        { name: "Git & GitHub", level: 85 },
-        { name: "Figma", level: 70 },
-        { name: "Vercel / Netlify", level: 80 },
-        { name: "Postman", level: 80 },
-        { name: "Responsive Design", level: 95 }
+        { name: "Git & GitHub", level: 90 },
+        { name: "Figma", level: 90 },
+        { name: "Vercel / Netlify", level: 90 },
+        { name: "Postman", level: 90 },
+        { name: "Adobe Photoshop", level: 95 }
       ]
     }
   ];
@@ -37,10 +34,10 @@ const Skills = () => {
   return (
     <section id="skills" className="section relative">
       <div className="bg-glow-2"></div>
-      
+
       <div className="container">
         <h2 className="section-title">Technical <span className="text-gradient">Skills</span></h2>
-        
+
         <div className="grid grid-cols-[repeat(auto-fit,minmax(320px,1fr))] max-[480px]:grid-cols-1 gap-8">
           {skillCategories.map((category, idx) => (
             <div key={idx} className="p-10 max-md:p-6 glass-panel">
@@ -53,8 +50,8 @@ const Skills = () => {
                       <span className="text-sm text-text-secondary">{skill.level}%</span>
                     </div>
                     <div className="w-full h-2 bg-white/5 rounded-full overflow-hidden">
-                      <div 
-                        className="progress-fill" 
+                      <div
+                        className="progress-fill"
                         style={{ width: `${skill.level}%` }}
                       ></div>
                     </div>

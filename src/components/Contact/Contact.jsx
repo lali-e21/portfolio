@@ -53,7 +53,7 @@ const Contact = () => {
           <div>
             <h3 className="text-3xl mb-4">Let's talk about everything!</h3>
             <p className="text-text-secondary mb-10">
-              Don't like forms? Send me an email. 👋
+              Don't like forms? Send me an email.
             </p>
             
             <div className="flex flex-col gap-8">
@@ -73,7 +73,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="text-lg mb-1">Phone</h4>
-                  <a href="tel:+251900000000" className="text-text-secondary hover:text-text-primary transition-colors">+251 900 000 000</a>
+                  <a href="tel:+251922840235" className="text-text-secondary hover:text-text-primary transition-colors">+251 922 840 235</a>
                 </div>
               </div>
               

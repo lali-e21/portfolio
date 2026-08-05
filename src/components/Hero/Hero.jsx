@@ -3,12 +3,11 @@ import { ArrowRight } from 'lucide-react';
 import logo from '../../assets/logo.JPG';
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center relative overflow-hidden pt-[200px] pb-[80px] max-md:pt-[140px] max-[480px]:pt-[100px] max-[480px]:pb-[60px]">
+    <section id="home" className="min-h-screen flex items-center relative overflow-hidden">
       <div className="bg-glow-1"></div>
 
       <div className="max-w-[1200px] mx-auto px-8 max-md:px-4 grid grid-cols-2 max-md:grid-cols-1 gap-16 max-md:gap-12 items-center w-full max-md:text-center max-md:pt-8">
         <div className="max-w-[600px] max-md:mx-auto animate-fade-in flex flex-col max-md:items-center">
-          <h3 className="text-lg font-semibold mb-4 tracking-[1px] uppercase text-gradient max-[480px]:text-sm">Full-Stack Developer & Visual Designer</h3>
           <h1 className="text-[clamp(2.5rem,4vw,3.5rem)] max-[480px]:text-[2.2rem] tracking-[-1.5px] mb-6 leading-[1.1] text-white">
             Full Stack Developer and Graphics Designer
           </h1>

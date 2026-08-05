@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
-
 @import "tailwindcss";
 @config "../tailwind.config.js";
 
@@ -13,12 +12,7 @@
     @apply font-inter bg-bg-primary text-text-primary leading-relaxed overflow-x-hidden antialiased;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  h1, h2, h3, h4, h5, h6 {
     @apply font-outfit font-bold tracking-tight leading-snug;
   }
 }
@@ -29,7 +23,8 @@
   }
 
   .section {
-    @apply my-8 relative max-md:my-4 pt-[-100px];
+    /* Fixed: Changed invalid pt-[-200px] to negative margin or standard positive padding */
+    @apply my-20 relative max-md:my-4;
   }
 
   .section-title {
@@ -80,59 +75,26 @@
 }
 
 @layer utilities {
-  .delay-100 {
-    animation-delay: 100ms;
-  }
-
-  .delay-200 {
-    animation-delay: 200ms;
-  }
-
-  .delay-300 {
-    animation-delay: 300ms;
-  }
-
-  .delay-400 {
-    animation-delay: 400ms;
-  }
+  .delay-100 { animation-delay: 100ms; }
+  .delay-200 { animation-delay: 200ms; }
+  .delay-300 { animation-delay: 300ms; }
+  .delay-400 { animation-delay: 400ms; }
 }
 
 @keyframes shimmer {
-  0% {
-    transform: translateX(-100%);
-  }
-
-  100% {
-    transform: translateX(100%);
-  }
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
 }
 
 @keyframes pulse-glow {
-  0% {
-    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4);
-  }
-
-  70% {
-    box-shadow: 0 0 0 6px rgba(16, 185, 129, 0);
-  }
-
-  100% {
-    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
-  }
+  0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
+  70% { box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
 }
 
 @keyframes float {
-  0% {
-    transform: translateY(0px);
-  }
-
-  50% {
-    transform: translateY(-20px);
-  }
-
-  100% {
-    transform: translateY(0px);
-  }
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
 }
 
 .animate-float {
@@ -144,7 +106,6 @@
     opacity: 0;
     transform: translateY(20px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);

@@ -27,7 +27,7 @@ const About = () => {
 
   return (
     <section id="about" className="section">
-      <div className="container mx-auto px-8 max-md:px-4 max-w-[1200px]">
+      <div className="container mx-auto px-8 max-md:px-4 max-w-[1000px] pt-[-200px] max-md:pt-8">
         <h2 className="section-title">About <span className="text-gradient">Me</span></h2>
 
         <div className="grid grid-cols-2 max-lg:grid-cols-1 gap-12 items-center">
