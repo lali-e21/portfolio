@@ -152,48 +152,17 @@ const Navbar = () => {
             About
           </a>
 
-          {/* Desktop Dropdown */}
-          <div className="relative" ref={dropdownRef}>
-            <button
-              className={`text-sm lg:text-base tracking-wide transition-colors flex items-center gap-1.5 whitespace-nowrap ${
-                isDesktopDropdownOpen || activeSection === 'skills'
-                  ? 'text-orange-400'
-                  : 'text-slate-200 hover:text-orange-400'
-              }`}
-              onClick={() => setIsDesktopDropdownOpen(!isDesktopDropdownOpen)}
-              onMouseEnter={() => setIsDesktopDropdownOpen(true)}
-            >
-              Tech Stack
-              <ChevronDown
-                className={`w-3.5 h-3.5 lg:w-4 lg:h-4 transition-transform duration-200 flex-shrink-0 ${
-                  isDesktopDropdownOpen ? 'rotate-180' : ''
-                }`}
-              />
-            </button>
-
-            {isDesktopDropdownOpen && (
-              <div
-                className="absolute top-full right-0 mt-2 w-48 bg-slate-800 rounded-lg shadow-xl border border-slate-700 py-2 z-50"
-                onMouseLeave={() => setIsDesktopDropdownOpen(false)}
-              >
-                {stackItems.map((item, index) => {
-                  const Icon = item.icon;
-                  return (
-                    <a
-                      key={index}
-                      href={item.href}
-                      className="flex items-center gap-2.5 px-4 py-2.5 text-sm text-slate-200 hover:bg-slate-700 hover:text-orange-400 transition-colors"
-                      onClick={() => setIsDesktopDropdownOpen(false)}
-                    >
-                      <Icon className="w-4 h-4 text-orange-400 flex-shrink-0" />
-                      {item.name}
-                    </a>
-                  );
-                })}
-              </div>
-            )}
-          </div>
-
+         
+          <a
+            href="#skills"
+            className={`text-sm lg:text-base tracking-wide transition-colors whitespace-nowrap ${
+              activeSection === 'skills'
+                ? 'text-orange-400'
+                : 'text-slate-200 hover:text-orange-400'
+            }`}
+          >
+            Tech Stack
+          </a>
           <a
             href="#projects"
             className={`text-sm lg:text-base tracking-wide transition-colors whitespace-nowrap ${
